@@ -1,0 +1,26 @@
+﻿@using Project.Web.Models;
+@model TimeCard
+@{
+    ViewBag.Title = "ClockOut";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>What have you been working on?</h2>
+
+<form action=@Url.Action("ClockOut", "Home") method="Post">
+    <div>
+        @Html.HiddenFor(m => m.Username)
+    </div>
+    <div>
+        @Html.LabelFor(m => m.Project)
+        @Html.TextBoxFor(m => m.Project)
+    </div>
+    <div>
+        @Html.LabelFor(m => m.Notes)
+        @Html.TextAreaFor(m => m.Notes)
+    </div>
+
+    <button>Clock Out</button>
+ </form>
+
+

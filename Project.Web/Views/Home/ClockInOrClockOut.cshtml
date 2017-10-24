@@ -1,0 +1,18 @@
+﻿@using Project.Web.Models;
+@model ClockInClockOut
+@{
+    ViewBag.Title = "ClockInOrClockOut";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Clock Time</h2>
+
+<div>
+    <form actions="@Url.Action("ClockInOrOut", "Home")" method="post">
+
+        @Html.LabelFor(m => m.Username)
+        @Html.TextBoxFor(m => m.Username)
+
+        <button>Submit</button>
+    </form>
+</div>

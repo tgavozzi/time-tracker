@@ -1,0 +1,17 @@
+﻿@using Project.Web.Models;
+@model TimeCard
+
+@{
+    ViewBag.Title = "TimeCardHistory";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Time Card History</h2>
+
+<form action=@Url.Action("TimeCardHistoryResult", "Home") method="get">
+    <div>
+        @Html.LabelFor(m => m.Username)
+        @Html.TextBoxFor(m => m.Username)
+    </div>
+    <button>Get Time Clock Information</button>
+</form>

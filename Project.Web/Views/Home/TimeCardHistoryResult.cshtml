@@ -1,0 +1,20 @@
+﻿@using Project.Web.Models;
+@model List<TimeCard>
+@{
+    ViewBag.Title = "TimeCardHistoryResult";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Time Clock Details</h2>
+
+
+@foreach (TimeCard card in Model)
+{
+    <ul>
+        <li>@card.Username;</li>
+        <li>@card.Project;</li>
+        <li>@card.StartDate;</li>
+        <li>@card.EndDate;</li>
+        <li>@card.Notes;</li>
+    </ul>
+}

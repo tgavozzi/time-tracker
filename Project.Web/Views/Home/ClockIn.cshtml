@@ -1,0 +1,15 @@
+﻿@using Project.Web.Models;
+@model TimeCard
+@{
+    ViewBag.Title = "ClockIn";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Clock Time</h2>
+<form action=@Url.Action("ClockIn", "Home") method="Post">
+    <div>
+        @Html.LabelFor(m => m.Username)
+        @Html.TextBoxFor(m => m.Username)
+    </div>
+    <button>Clock In</button>
+</form>
