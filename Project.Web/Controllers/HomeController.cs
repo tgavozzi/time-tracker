@@ -55,7 +55,7 @@ namespace Project.Web.Controllers
         [HttpPost]
         public ActionResult ClockOut(TimeCard card)
         {
-            dal.ClockOut(card.Username);
+            dal.ClockOut(card);
 
             return RedirectToAction("Index");
         }
