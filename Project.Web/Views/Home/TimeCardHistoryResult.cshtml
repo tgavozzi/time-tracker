@@ -7,14 +7,24 @@
 
 <h2>Time Clock Details</h2>
 
-
-@foreach (TimeCard card in Model)
-{
-    <ul>
-        <li>@card.Username;</li>
-        <li>@card.Project;</li>
-        <li>@card.StartDate;</li>
-        <li>@card.EndDate;</li>
-        <li>@card.Notes;</li>
-    </ul>
-}
+<div class="container">
+    @foreach (TimeCard card in Model)
+    {
+        <table>
+            <tr>
+                <th>Name</th>
+                <th>Project</th>
+                <th>Start Date</th>
+                <th>End Date</th>
+                <th>Notes</th>
+            </tr>
+            <tr>
+                <td>@card.Username</td>
+                <td>@card.Project</td>
+                <td>@card.StartDate</td>
+                <td>@card.EndDate</td>
+                <td>@card.Notes</td>
+            </tr>
+        </table>
+    }
+</div>

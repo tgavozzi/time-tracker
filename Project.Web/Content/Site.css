@@ -2,6 +2,7 @@
     padding-top: 50px;
     padding-bottom: 20px;
     font-family: 'Kalam', cursive;
+    background-color: #F6D9D5;
 }
 
 /* Set padding to keep content from hitting the edges */
@@ -27,3 +28,37 @@ h2 {
     font-family: 'Kalam', cursive;
 }
 
+th{
+    width: 300px;
+}
+
+#clock-container {
+    width: 400px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.clock-row {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.clock-letter {
+    width: 60px;
+    height: 60px;
+    display: block;
+    line-height: 60px;
+    text-align: center;
+    color: #808080;
+    font-family: 'Kalam', cursive;
+    font-weight: 400;
+    font-size: 20px;
+}
+
+.active {
+    color: #e84a5f;
+    font-weight: 700;
+    text-shadow: 0 0 12px #e84a5f;
+}
