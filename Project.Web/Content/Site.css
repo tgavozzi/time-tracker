@@ -26,10 +26,17 @@ p {
 
 h2 {
     font-family: 'Kalam', cursive;
+    font-size: 50px;
 }
 
 th{
     width: 300px;
+}
+
+.home-page {
+    width: 40%;
+    position: absolute;
+    padding-right: 10%;
 }
 
 #clock-container {
@@ -37,6 +44,8 @@ th{
     margin: auto;
     display: flex;
     flex-direction: column;
+    padding-left: 10%;
+    padding-top: 0;
 }
 
 .clock-row {
