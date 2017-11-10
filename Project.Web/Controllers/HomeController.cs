@@ -44,12 +44,12 @@ namespace Project.Web.Controllers
             }
             
         }
-        
+
         public ActionResult ClockOut(string username)
         {
             TimeCard finishProject = new TimeCard();
             finishProject.Username = username;
-           return View("ClockOut", finishProject);
+            return View("ClockOut", finishProject);
         }
 
         [HttpPost]
@@ -65,7 +65,7 @@ namespace Project.Web.Controllers
             return View("TimeCardHistory");
         }
 
-        
+
         public ActionResult TimeCardHistoryResult(string username)
         {
             var timeCardRecords = dal.GetTimeCardHistory(username);

@@ -76,7 +76,7 @@
             }
             // twenty past
             else if (minute >= 19) {
-                $('.a').RemoveClass('active');
+                $('.a').removeClass('active');
                 $('.quarter').removeClass('active');
                 $('.twenty').addClass('active');
                 $('.past').addClass('active');

@@ -16,7 +16,7 @@
                 <th>Project</th>
                 <th>Start Date</th>
                 <th>End Date</th>
-                <th>Total Hours</th>
+                <th>Total Hours Worked</th>
                 <th>Notes</th>
             </tr>
             <tr>
@@ -24,7 +24,26 @@
                 <td>@card.Project</td>
                 <td>@card.StartDate</td>
                 <td>@card.EndDate</td>
-                <td>@((card.EndDate - card.StartDate))</td>
+                @if (card.EndDate.HasValue)
+                {
+
+                    var difference = card.EndDate - card.StartDate;
+                    if (difference.Value.Hours < 10)
+                    {
+                        var final2 = $"0{difference.Value.Hours}:{difference.Value.Minutes}:{difference.Value.Seconds}";
+                        <td>@(final2)</td>
+                    }
+                    else
+                    {
+                        var final = $"{difference.Value.Hours}:{difference.Value.Minutes}:{difference.Value.Seconds}";
+
+                    <td>@(final)</td>
+                    };
+                }
+                else
+                {
+                    <td></td>
+                }
                 <td>@card.Notes</td>
             </tr>
         </table>
